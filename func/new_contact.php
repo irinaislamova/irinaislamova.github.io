@@ -19,7 +19,7 @@ if ($_POST['phone'] == 0 && $_POST['name'] != null && $_POST['adress'] != null) 
 			<label>Введите имя:</label><br>
 			<input type="text" name="name" value="<?=$_POST['name']?>" required><br>
 			<label>Введите номер телефона:</label><br>
-                        <input type="text" name="phone" value="" <?php if ($_POST['phone'] == 0 && $_POST['name'] != null && $_POST['adress'] != null) { ?> autofocus <?php } ?> minlength="6" maxlength="10" required><br>
+                        <input type="text" name="phone" value="<?=$_POST['phone']?>" <?php if ($_POST['phone'] == 0 && $_POST['name'] != null && $_POST['adress'] != null) { ?> autofocus <?php } ?> minlength="6" maxlength="10" required><br>
 			<label>Введите адрес:</label><br>
 			<input type="text" name="adress" value="<?=$_POST['adress']?>" required><br>
 			<input type="submit" value="Добавить">
