@@ -57,7 +57,7 @@ function selectPeople() {
 function selectPeopleById($id) {
 	$id = (int)($id);
 	$db = db_connect();
-	$result = mysqli_query($db, "SELECT `id`, `name`, `phone`, `adress` FROM `phone` WHERE `id`='{$id}' ORDER BY `fio` ASC, `adress` ASC");
+	$result = mysqli_query($db, "SELECT `id`, `name`, `phone`, `adress` FROM `phone` WHERE `id`='{$id}' ORDER BY `name` ASC, `adress` ASC");
 	while ($row = mysqli_fetch_row($result)) {
 		$response[] = $row;
 	}
@@ -77,7 +77,7 @@ function selectPeopleByName($name) {
 function selectPeopleByPhone($phone) {
 	$phone = (int)($phone);
 	$db = db_connect();
-	$result = mysqli_query($db, "SELECT `id`, `name`, `phone`, `adress` FROM `phone` WHERE `phone` LIKE '%{$phone}%' ORDER BY `name` ASC, `address` ASC");
+	$result = mysqli_query($db, "SELECT `id`, `name`, `phone`, `adress` FROM `phone` WHERE `phone` LIKE '%{$phone}%' ORDER BY `name` ASC, `adress` ASC");
 	while ($row = mysqli_fetch_row($result)) {
 		$response[] = $row;
 	}
