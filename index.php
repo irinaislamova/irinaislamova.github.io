@@ -48,11 +48,11 @@ if ($_POST['search'] == 'name') {
 					<td><input type="submit" value="Поиск"></td>
 				</form>
 			</tr>
-		</table>
+</table><br>
                
 
 <?php if ($people != null) { ?>
-<table border="2px">'
+<table border="2px">
 <tr>
 <td>Имя</td><td>Телефон</td><td>Адрес</td>
 </tr>
