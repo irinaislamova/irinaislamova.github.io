@@ -1,5 +1,6 @@
 <?php
 header("Content-Type: text/html; charset=utf-8");
+error_reporting(0);
 if ($_POST['phone'] == 0 && $_POST['name'] != null && $_POST['adress'] != null) {
 	echo "Введите правильный номер телефона<br><br>";
 } elseif ($_POST['name'] != null && $_POST['adress'] != null && $_POST['phone']) {
