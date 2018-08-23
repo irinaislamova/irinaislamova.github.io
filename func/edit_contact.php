@@ -1,6 +1,7 @@
 <?php
 header("Content-Type: text/html; charset=utf-8");
 error_reporting(0);
+error_reporting(E_ERROR|E_WARNING|E_PARSE|E_NOTICE);
 require_once '../database.php';
 $_POST['phone'] = (int)($_POST['phone']);
 
@@ -34,3 +35,4 @@ if ($_GET['id'] != null) {
     header("Location: /index.php");
 }
 ?>
+
